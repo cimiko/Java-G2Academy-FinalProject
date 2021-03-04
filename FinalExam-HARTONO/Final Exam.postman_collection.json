@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "d5e31ec6-e083-4e82-ac8e-02b2f2a64ad8",
+		"name": "Final Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Person to Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"bb@mail.com\",\n    \"name\": \"bb\",\n    \"password\": \"bb\",\n    \"confirmPassword\": \"bb\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYkBtYWlsLmNvbSIsImV4cCI6MTYwNzc3Njk3Nn0.kAsDEza1ebDVWQ88l9FWNRWMAFHkVW7dUD0kNFkrukQ6Ew3PQxiH_Fx9x3s9j266HkK0HcaCvMy350hH6Pj04Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"bb@mail.com\",\n    \"password\": \"bb\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET product by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYkBtYWlsLmNvbSIsImV4cCI6MTYwNzc3Njk3Nn0.kAsDEza1ebDVWQ88l9FWNRWMAFHkVW7dUD0kNFkrukQ6Ew3PQxiH_Fx9x3s9j266HkK0HcaCvMy350hH6Pj04Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/product/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Save Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYkBtYWlsLmNvbSIsImV4cCI6MTYwODIyMTcwOX0._SVAmkEovyvWWecqRgkSMchh90os_z-lD0gd1X9Nxb_5QMbW1tsBhc2raLERiTEXiwT5ZxCnYNkIT4M1j2MZow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Iphone 11 Storage 516GB space gray\",\n    \"description\": \"Iphone 11 Storage 516GB space gray, Iphone terbaru dari Apple\",\n    \"price\": 16000000,\n    \"stock\": 10,\n    \"category\": \"handphone\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST add-to-cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYkBtYWlsLmNvbSIsImV4cCI6MTYwODM5NTEyMX0.P0TN6wAGyybCXs0oVU65XiSREsWdAAkZtBIeYmN0jdGIi-Pblz317MnlaB8Gbyp2siTUXbxl2EISEKHN8_HAuQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": 4,\n    \"quantity\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/add-to-cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"add-to-cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYkBtYWlsLmNvbSIsImV4cCI6MTYwODM5NDI2MH0.jLPd9O1NtByXOlL4BcBiXbWYQuw7x9WEf6hk1Yv0_wew-yPBoGJuwIqrYm1Rzh-7rQBY3K7M4oyQADqq4cCNOA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update product by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYkBtYWlsLmNvbSIsImV4cCI6MTYwODAzMzAwMX0.MEtrdGR-wiIblg70UryAyjgnLo6cbo1NEVf6t41YKuwLfyK5PZKwkzw1lz_n3JTeHZl6tceYzXLc3jMroQw2rA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"description\": \"Iphone 12 Storage 516GB space gray, Iphone terbaru dari Apple\",\n    \"name\": \"Iphone 12 Storage 516GB space gray\",\n    \"price\": 18000000,\n    \"stock\": 10,\n    \"category\": \"handphone\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update Stock Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYkBtYWlsLmNvbSIsImV4cCI6MTYwODM5NTUyNH0.c4sAnh-XEc-k__V53jLYuwTwNSPl68QL7OfcoIlK6IRV6waHzlMerGAmMv4zNsco4E0rFCiMXayTKL1Qi43xjw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "10",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/stock/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"stock",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET search category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/search?query=iphone&page=0&size=1&sort=alphabetical",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "iphone"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						},
+						{
+							"key": "sort",
+							"value": "alphabetical"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Product query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products?category=handphone&page=0&size=20&sort=cheapest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "handphone"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						},
+						{
+							"key": "sort",
+							"value": "cheapest"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Update Order Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "8",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/order-shipped",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"order-shipped"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
